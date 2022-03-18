@@ -1,0 +1,347 @@
+html { scroll-behavior: smooth; }
+                /* Media layout */
+@media screen and (max-width: 768px) {
+html { scroll-behavior: smooth; }
+.title h1{
+    font-size: 40px;
+}
+.title h4 {
+    font-size: 20px !important;
+    margin: 10px !important;
+}
+.intro img{
+    display: none;
+}
+.intro p{
+    grid-area: intro;
+    margin-top: 10px !important;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+}
+.north_wash, .robbers_roost, .escalante {
+    margin: 30px 3px 0px 3px !important;
+    font-size: 10px !important;
+    height: 120px;
+    width: 150px;
+}
+.areaTitle {
+    margin-top: 45px !important;
+}
+                    /* North Wash Info */
+
+#northInfo {
+    grid-area: info;
+}
+#northInfo h2{
+    margin-top: -150px !important;
+}
+#northInfo p {
+    float: left;
+    width: 85% !important;
+    font-size: 10px;
+}
+#northInfo img{
+    float: right;
+    width: 100%;
+    height: 300px;
+    width: 440px !important;
+    border-radius: 8px;
+    margin-left: 10px;
+}
+#northInfo figcaption {
+    float: right;
+    margin-right: 10px;
+}
+                    /* Robbers Roost Info */
+#robbInfo {
+    grid-area: info;
+}
+#robbInfo h2 {
+    margin-top: -130px !important;
+}
+#robbInfo p {
+    float: left;
+    width: 85% !important;
+    font-size: 10px;
+}
+#robbInfo iframe {
+    float: right;
+    margin-right: 40px;
+    border-radius: 10px;
+}
+                    /* Escalante Info */
+#escInfo {
+    grid-area: info;
+    
+}
+#escInfo h2 {
+    margin-top: -200px !important;
+}
+#escInfo p {
+    float: left;
+    width: 85% !important;
+    font-size: 10px;
+}
+#escInfo img {
+    float: right;
+    width: 100%;
+    height: 270px;
+    width: 440px !important;
+    border-radius: 8px;
+    margin-left: 10px;
+    margin-top: 40px !important;
+}
+.contact {
+    grid-area: contact;
+    height: 300px;
+    width: 300px;
+    margin-left: 20px;
+    margin-bottom: 50px;
+    margin-top: 20px;
+    border-radius: 25px;
+    background-color: #FFEBDE;
+    display: none;
+    transition: width 2s;
+}
+}
+                /* regular layout */
+
+.container {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: .2fr 1fr .2fr .6fr .6fr 0.2fr .1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "menu menu menu"
+    "title title title"
+    "intro intro intro"
+    "north_wash robbers_roost escalante"
+    "info info info"
+    "contact contact contact"
+    "footer footer footer";
+}
+.menu {
+    grid-area: menu;
+    background-color: black;
+    margin: -10px;
+    width: 100%;
+    position: fixed;
+    padding-bottom: 35px;
+    padding-top: 10px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    margin-top: 20px;
+    position: relative;
+    top: 10px;
+}
+.menu a:hover {
+    background-color: white;
+    color: black;
+    padding: 15px 10px 15px 10px;
+    border-radius: 10px;
+}
+
+.title { 
+    grid-area: title;
+    margin: -50px -10px 20px -10px ;
+    color: white;
+    background-image: url(title_image.jpg);
+    height: 450px;
+    background-size: cover;
+    background-position: bottom left;
+    text-align: center;
+    font-size: 30px; 
+       }
+.title h1 {
+    margin-top: 100px;
+}
+.intro {
+    grid-area: intro;
+    margin-top: 60px;
+}
+.intro p {
+    font-size: 20px;
+    float: left;
+    margin-left: 600px;
+    margin-right: 50px;  
+}
+.intro img{
+    float: left;
+    grid-area:introImg;
+    height: 300px;
+    width: 400px;
+    margin-left: 75px;
+    margin-top: -260px;
+    border-radius: 20px;
+}
+.north_wash { 
+    grid-area: north_wash;
+    background-image: url(north_wash.jpg);
+    background-size: cover;
+    margin: 80px 20px 10px 20px;
+    border-style: solid;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+.areaTitle {
+    margin-top: 110px;
+}
+
+.north_wash:hover {
+    margin: 50px 10px 0px 10px;
+    box-shadow: 10px 10px 8px grey ;
+    display: block;
+    text-decoration: none;
+}
+
+.robbers_roost { 
+    grid-area: robbers_roost;
+    background-image: url(robbers_roost.jpg);
+    background-size: cover;
+    margin: 80px 20px 10px 20px;
+    border-style: solid;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+.robbers_roost:hover {
+    margin: 50px 10px 0px 10px;
+    box-shadow: 10px 10px 8px grey ;
+    text-decoration: none;
+}
+.escalante { 
+    grid-area: escalante;
+    background-image: url(escalante.jpg);
+    background-size: cover;
+    background-position: center right;
+    margin: 80px 20px 10px 20px;;
+    border-style: solid;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+.escalante:hover {
+    margin: 50px 10px 0px 10px;
+    box-shadow: 10px 10px 8px grey;
+    text-decoration: none;
+}
+.info {
+    grid-area: info;
+    display: none;
+}
+#quote{
+    font-style: italic;
+    font-size: 30px;
+}
+
+a {
+    margin-left: 30px;
+}
+                    /* North Wash Info */
+#northInfo {
+    grid-area: info;
+}
+#northInfo h2{
+    margin-top: 20px;
+    margin-left: 40px;
+}
+#northInfo p {
+    float: left;
+    width: 55%;
+    margin-left: 40px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+#northInfo img{
+    width: 37%;
+    border-radius: 8px;
+    margin-left: 30px;
+}
+#northInfo figcaption {
+    float: right;
+    margin-right: 20px;
+}
+                    /* Robbers Roost Info */
+#robbInfo {
+    grid-area: info;
+}
+#robbInfo h2 {
+    margin-top: 20px;
+    margin-left: 40px;
+}
+#robbInfo p {
+    float: left;
+    width: 55%;
+    margin-left: 40px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+#robbInfo iframe {
+    float: right;
+    margin-right: 40px;
+    border-radius: 10px;
+}
+                    /* Escalante Info */
+#escInfo {
+    grid-area: info;
+}
+#escInfo h2 {
+    margin-top: 20px;
+    margin-left: 40px;
+}
+#escInfo p {
+    float: left;
+    width: 55%;
+    margin-left: 40px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+#escInfo img {
+    float: right;
+    margin-top: -160px;
+    margin-right: 40px;
+    width: 37%;
+    border-radius: 8px;
+}
+#redirectAreas {
+    grid-area: intro;
+    visibility: none;
+    margin-top: 300px;
+    
+}
+                    /* Contact info */
+.contact {
+    grid-area: contact;
+    height: 300px;
+    width: 300px;
+    margin-left: 20px;
+    margin-bottom: 50px;
+    border-radius: 25px;
+    background-color: #FFEBDE;
+    display: none;
+    transition: width 2s;
+}
+.contact h2 {
+    float: left;
+    margin-left: 30px;
+}
+.contact ul {
+    margin-top: 30%;
+}
+.contact li {
+    padding: 10px;
+}
+                    /* Footer */
+.footer { 
+    grid-area: footer;
+    color: gray;
+    text-align: center;
+}
